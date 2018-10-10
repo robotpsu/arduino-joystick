@@ -6,30 +6,27 @@
  * \date    2018
  */
 
-void Joystick::attach(uint8_t pinX, uint8_t pinY)
-{
+#include "Joystick.h"
+
+void Joystick::attach(uint8_t pinX, uint8_t pinY) {
   _pinX = pinX;
   _pinY = pinY;
 }
 
-void Joystick::attach(uint8_t pinX, uint8_t pinY, uint8_t pinSw)
-{
+void Joystick::attach(uint8_t pinX, uint8_t pinY, uint8_t pinSw) {
   attach(pinX, pinY);
   pinMode(_pinSw = pinSw, INPUT_PULLUP);
 }
 
-int Joystick::x()
-{
+int Joystick::x() {
   return analogRead(_pinX);
 }
 
-int Joystick::y()
-{
+int Joystick::y() {
   return analogRead(_pinY);
 }
 
-int Joystick::s()
-{
+int Joystick::s() {
   return _pinSw ? !digitalRead(_pinSw) : LOW;
 }
 

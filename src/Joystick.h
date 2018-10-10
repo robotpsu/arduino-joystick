@@ -11,8 +11,16 @@
 
 #include <Arduino.h>
 
-class Joystick
-{
+struct JoystickData {
+  int x, y;
+  byte s;
+};
+
+struct JoystickPins {
+  byte x, y, s;
+};
+
+class Joystick {
 public:
   Joystick() : _pinX(0), _pinY(0), _pinSw(0) {}
 
