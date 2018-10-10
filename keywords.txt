@@ -6,6 +6,8 @@
 # Datatypes (KEYWORD1)
 #######################################
 Joystick	KEYWORD1
+JoystickData	KEYWORD1
+JoystickPins	KEYWORD1
 
 #######################################
 # Methods and functions (KEYWORD2)
